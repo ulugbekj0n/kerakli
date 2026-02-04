@@ -1,0 +1,1091 @@
+@import url("https://fonts.googleapis.com/css2?family=Glory:ital,wght@0,100..800;1,100..800&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+body {
+  font-family: "Mulish", sans-serif;
+}
+ul,
+ol {
+  list-style: none;
+}
+.header_logo {
+  width: 47px;
+  height: 38px;
+}
+.login {
+  padding: 20px 50px;
+  border-radius: 10px;
+}
+.all-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.link-wrapper {
+  display: flex;
+  gap: 56px;
+}
+.login {
+  background-color: #e9601d;
+  color: white;
+}
+.header_link {
+  color: #928c8c;
+}
+.header_link:active {
+  color: #e9601d;
+}
+.hero_blok {
+  display: flex;
+  margin-top: 68px;
+  align-items: center;
+  justify-content: space-between;
+}
+.hero_image {
+  width: 528px;
+  height: 528px;
+}
+.hero_title {
+  width: 619px;
+  font-size: 36px;
+  border-radius: 6px;
+  font-weight: 700;
+  display: inline-block;
+  color: black;
+  background-color: white;
+}
+.hero_span {
+  background-color: #e9601d;
+  color: #fff;
+  padding: 8px 30px 8px 14px;
+  border-radius: 6px;
+  font-weight: 700;
+  display: inline-block;
+}
+.hero_text {
+  width: 586px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 148%;
+  color: #5f5f5f;
+  margin-top: 68px;
+  margin-bottom: 60px;
+}
+.hero_text2 {
+  display: none;
+}
+@media (max-width: 768px) {
+  .link-wrapper {
+    display: none;
+  }
+  .header_logo {
+    width: 17px;
+    height: 14px;
+  }
+  .login {
+    padding: 6px 23px;
+    font-weight: 700;
+    font-size: 8px;
+    border-radius: 5px;
+  }
+  .hero_blok {
+    display: block;
+    margin: 0;
+  }
+  .hero_title {
+    width: 340px;
+    font-weight: 400;
+    font-size: 22;
+    line-height: 150%;
+    margin: 0px;
+    text-align: center;
+    letter-spacing: 0%;
+    margin-top: 60px;
+  }
+  .hero_image {
+    width: 214px;
+    height: 214px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  .hero_text {
+    display: none;
+  }
+  .hero_text2 {
+    width: 339px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 148%;
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    margin-top: 80px;
+  }
+
+  .hero_span {
+    padding: 0;
+    width: 340px;
+    font-weight: 400;
+    font-size: 22;
+    line-height: 150%;
+    margin: 0px;
+    text-align: center;
+    letter-spacing: 0%;
+    color: black;
+
+    background-color: white;
+  }
+}
+
+.img-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 120px;
+}
+.haqimizda-title {
+  font-size: 45px;
+  font-weight: 800;
+}
+.haqimizda-text {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  color: #928c8c;
+}
+
+.services {
+  list-style: none;
+  padding: 0;
+}
+
+.service-card {
+  width: 290px;
+  height: 241px;
+  /* padding: 24px; */
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.199);
+}
+
+/* ICON ICHIDA, TASHQARIGA CHIQMAYDI */
+.icon-box {
+  width: 85px;
+  height: 82px;
+  background: #ffc107;
+  border-radius: 18px; /* li radiusiga mos */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.icon-box img {
+  width: 66px;
+  height: 66px;
+  object-fit: contain;
+}
+
+.service-card h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.service-card p {
+  margin: 0;
+  color: #666;
+  line-height: 1.4;
+}
+
+.haqimizda_padding {
+  padding: 10px;
+}
+.item-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 80px;
+  gap: 40px;
+}
+@media (max-width: 768px) {
+  .item-wrapper {
+    justify-content: center;
+  }
+  .haqimizda-title {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 150%;
+    color: black;
+  }
+  .mobile-img {
+    width: 43px;
+    height: 26px;
+  }
+  .haqimizda-text {
+    margin-top: 10px;
+  }
+}
+.loyihalar {
+  padding: 30px;
+  background-color: rgba(255, 0, 255, 0.192);
+  margin-top: 100px;
+}
+.loyihalar_title {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 130%;
+  width: 591px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
+.img-wrapper2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.loyihalar {
+  overflow: hidden;
+}
+
+/* umumiy lenta */
+.img-wrapper2,
+.chapga_harakat,
+.onga_harakat {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  width: max-content;
+  flex-shrink: 0;
+  margin-bottom: 50px;
+}
+
+/* rasm KICHRAYMASIN */
+.img_item {
+  flex-shrink: 0;
+}
+
+.img_item img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  user-select: none;
+  pointer-events: none;
+}
+/* rasm kattaroq */
+.img_item img {
+  height: 100px; /* OLDI 60 edi */
+  width: auto;
+  object-fit: contain;
+}
+
+/* animatsiyani CSS emas, JS beradi */
+.chapga_harakat,
+.onga_harakat,
+.img-wrapper2 {
+  will-change: transform;
+}
+
+@media (min-width: 769px) {
+  .img-wrapper2 {
+    animation: chapgaYur 35s linear infinite;
+  }
+}
+
+@media (max-width: 768px) {
+  .img-wrapper2 {
+    display: none;
+  }
+  .loyihalar_title {
+    font-weight: 400;
+    font-size: 22px;
+    width: 341px;
+    margin-bottom: 32px;
+  }
+
+  .mobile-uchun {
+    display: block !important;
+    overflow: hidden;
+  }
+
+  .chapga_harakat {
+    animation: chapgaYur 35s linear infinite;
+  }
+
+  .onga_harakat {
+    animation: ongaYur 35s linear infinite;
+  }
+}
+
+/* ===== animatsiya ===== */
+@keyframes chapgaYur {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes ongaYur {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.sign-up {
+  padding: 23px 61px;
+  background-color: #e9601d;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  width: 255px;
+  color: white;
+  margin-top: 60px;
+}
+.accordion {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.accordion-item {
+  border: 2px solid #222;
+  border-radius: 22px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.accordion-item.active {
+  background: #ea6a1b;
+  color: #fff;
+}
+
+.accordion-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.num {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.title {
+  flex: 1;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.toggle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  background: transparent;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  font-size: 14px;
+  line-height: 1.6;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.accordion-item.active .accordion-body {
+  max-height: 200px;
+  padding: 16px 20px 24px;
+}
+.accordion-item {
+  border: 2px solid #222;
+  border-radius: 22px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+}
+
+.accordion-item:hover {
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14);
+  transform: translateY(-2px);
+}
+
+.accordion-item.active {
+  background: #ea6a1b;
+  color: #fff;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.521);
+}
+.jamoa-title {
+  font-weight: 600;
+  font-size: 45px;
+  line-height: 150%;
+  letter-spacing: 1.5%;
+  text-align: center;
+  margin-top: 100px;
+}
+.jamoa_blok {
+  display: flex;
+  align-items: center;
+}
+.jamoa_text {
+  width: 303px;
+  font-weight: 400;
+  font-size: 10px;
+  color: #928c8c;
+}
+.jamoa_text1 {
+  font-weight: 400;
+  font-size: 18px;
+  color: #928c8c;
+  text-align: center;
+  max-width: 1100px;
+  margin-top: 5px;
+}
+.item {
+  width: 360px;
+  border-radius: 15px;
+  border: 1px solid #e0e0e0;
+  padding: 51px 30px;
+
+  /* 🔥 chiroyli shadow */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12), 0 4px 10px rgba(0, 0, 0, 0.06);
+
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* hover bo‘lganda ozgina ko‘tarilsin */
+.item:hover {
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18), 0 8px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.jamoa_title {
+  color: #e9601d;
+  font-weight: 700;
+  font-size: 16px;
+}
+.jamoa_ism {
+  font-weight: 400;
+  font-size: 10px;
+  color: #928c8c;
+}
+.item-wrapper2 {
+  margin-top: 52px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .item-wrapper2 {
+    justify-content: center;
+  }
+  .item {
+    padding: 20px 10px;
+  }
+  .jamoa_text1 {
+    font-size: 8px;
+    font-weight: 400;
+  }
+  .jamoa-title {
+    margin: 20px;
+    font-weight: 600;
+    font-size: 22px;
+  }
+  .sign-up {
+    padding: 12px 10px;
+    width: 150px;
+  }
+}
+
+.header_link {
+  position: relative;
+  color: #111;
+  text-decoration: none;
+  padding: 8px 0;
+  transition: color 0.3s ease;
+}
+
+.header_link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #e9601d;
+  transition: width 0.3s ease;
+}
+
+.header_link.active {
+  color: #e9601d;
+}
+
+.header_link.active::after {
+  width: 100%;
+}
+html {
+  scroll-behavior: smooth;
+}
+header {
+  background: #fff;
+  z-index: 1000;
+}
+@media (min-width: 769px) {
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  body {
+    padding-top: 90px; /* header balandligi */
+  }
+
+  section {
+    scroll-margin-top: 110px;
+  }
+}
+.boglanish_blok {
+  padding: 31px 40px;
+  background-color: #e9601d;
+}
+.boglanish_title {
+  color: white;
+  width: 620px;
+  font-size: 24px;
+}
+.boglanish_blok {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
+}
+.havola {
+  padding: 10px 40px;
+  color: white;
+  border: 1px solid white;
+  border-radius: 15px;
+}
+.footer {
+  background-color: rgba(255, 0, 255, 0.192);
+  padding-top: 123px;
+}
+.boglanish_blok {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 100px;
+  z-index: 5;
+  padding: 50px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+footer {
+  position: relative;
+  padding-top: 120px;
+}
+.footer_items {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.footer_link {
+  color: #928c8c;
+  text-decoration: underline;
+}
+@media (max-width: 768px) {
+  .boglanish_title {
+    color: white;
+    max-width: 620px;
+    font-size: 10px;
+    font-weight: 500;
+  }
+  .havola {
+    padding: 4px 8px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 15px;
+  }
+  .boglanish_blok {
+    padding: 40px;
+    border-radius: 5px;
+    margin-top: 0px;
+  }
+  .footer {
+    padding-top: 100px;
+  }
+}
+.footer_blokkk {
+  display: flex;
+  align-items: center;
+  gap: 150px;
+}
+.footer_items {
+  display: flex;
+  gap: 150px;
+}
+.aloqauchun {
+  color: #5f5f5f;
+}
+@media (max-width: 768px) {
+  .footer_blokkk {
+    display: block;
+    margin-top: 20px;
+  }
+  .footer_items {
+    margin-left: 20px;
+  }
+}
+.nomer {
+  color: #5f5f5f;
+  text-decoration: underline;
+}
+.logo-marquee {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* asosiy marquee */
+.marquee {
+  display: flex;
+  width: max-content;
+  gap: 80px;
+  animation: marquee-left 40s linear infinite;
+}
+
+/* yo‘nalishlar */
+.marquee.left {
+  animation-name: marquee-left;
+}
+
+.marquee.right {
+  animation-name: marquee-right;
+}
+
+/* MUHIM: 100% */
+@keyframes marquee-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee-right {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.img_item {
+  flex-shrink: 0;
+}
+
+.mobile-only {
+  display: none;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+  .mobile-only {
+    display: flex;
+  }
+
+  .logo-marquee {
+    gap: 16px;
+  }
+
+  .marquee {
+    gap: 40px; /* orasini kichikroq */
+    animation-duration: 30s; /* HAMMASI BIR XIL */
+  }
+
+  .img_item img {
+    height: 40px; /* logo kichikroq */
+    width: auto;
+  }
+  .sign-up {
+    margin-top: 0;
+  }
+}
+.jamoa-slider-wrapper {
+  position: relative;
+  overflow: hidden; /* MUHIM */
+}
+
+.item-wrapper2.slider {
+  display: flex;
+  gap: 30px;
+  transition: transform 0.5s ease;
+  will-change: transform;
+}
+
+.item {
+  min-width: 360px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  flex-shrink: 0; /* MUHIM */
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  font-size: 30px;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 10;
+}
+
+.nav-btn.left {
+  left: 10px;
+}
+.nav-btn.right {
+  right: 10px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .nav-btn {
+    display: none;
+  }
+
+  .item-wrapper2.slider {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .item {
+    min-width: 260px;
+    scroll-snap-align: start;
+  }
+}
+
+/* "Butun jamoani ko‘rish" */
+.item-wrapper2.show-grid {
+  transform: none !important;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.jamoa-slider-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* DESKTOP SLIDER */
+.item-wrapper2.slider {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 30px;
+  transition: transform 0.5s ease;
+}
+
+.item {
+  min-width: 360px;
+  flex-shrink: 0;
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Tugmalar */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  background: #fff;
+}
+
+.nav-btn.left {
+  left: 10px;
+}
+.nav-btn.right {
+  right: 10px;
+}
+
+/* 🔽 MOBILE */
+@media (max-width: 768px) {
+  .nav-btn {
+    display: none;
+  }
+
+  .item-wrapper2.slider {
+    flex-direction: column; /* USTMA-UST */
+    transform: none !important;
+  }
+
+  .item {
+    min-width: 100%;
+  }
+}
+
+/* 🔽 BUTUN JAMOA OCHILGANDA */
+.item-wrapper2.expanded {
+  flex-wrap: wrap;
+  transform: none !important;
+  justify-content: center;
+}
+
+.item-wrapper2.expanded .item {
+  min-width: 360px;
+}
+/* umumiy */
+.jamoa-slider-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+/* DESKTOP — SLIDER */
+.item-wrapper2.slider {
+  display: flex;
+  gap: 30px;
+  transition: transform 0.5s ease;
+}
+
+.item {
+  min-width: 360px;
+  flex-shrink: 0;
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* tugmalar (desktop) */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  font-size: 30px;
+  background: #fff;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.nav-btn.left {
+  left: 10px;
+}
+.nav-btn.right {
+  right: 10px;
+}
+
+/* ===================== */
+/* 📱 MOBILE LOGIKA */
+/* ===================== */
+@media (max-width: 768px) {
+  /* slider emas */
+  .item-wrapper2.slider {
+    flex-direction: column;
+    transform: none !important;
+  }
+
+  /* faqat 3 ta ko‘rinadi */
+  .item-wrapper2.slider .item:nth-child(n + 4) {
+    display: none;
+  }
+
+  /* expanded bo‘lsa hammasi chiqadi */
+  .item-wrapper2.slider.expanded .item {
+    display: block;
+  }
+
+  /* desktop tugmalar yo‘q */
+  .nav-btn {
+    display: none;
+  }
+
+  .item {
+    min-width: 100%;
+  }
+}
+
+/* ===================== */
+/* TOGGLE TUGMA */
+/* ===================== */
+.show-all {
+  margin-top: 30px;
+  padding: 12px 24px;
+  border-radius: 30px;
+  border: none;
+  color: #5f5f5f;
+  cursor: pointer;
+  text-align: center;
+  justify-content: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* desktopda tugma kerak emas */
+@media (min-width: 769px) {
+  .show-all {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .item-wrapper2.slider {
+    display: flex;
+    flex-direction: column;
+    transform: none !important;
+  }
+
+  /* BOSHLANG‘ICH: faqat 3 ta */
+  .item-wrapper2.slider:not(.expanded) .item:nth-child(n + 4) {
+    display: none;
+  }
+
+  /* OCHILGANDA: hammasi */
+  .item-wrapper2.slider.expanded .item {
+    display: block;
+  }
+
+  .nav-btn {
+    display: none;
+  }
+
+  .item {
+    min-width: 100%;
+  }
+}
+/* umumiy */
+.jamoa-slider-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+/* DESKTOP */
+.item-wrapper2.slider {
+  display: flex;
+  gap: 30px;
+  transition: transform 0.5s ease;
+}
+
+.item {
+  min-width: 360px;
+  flex-shrink: 0;
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .item-wrapper2.slider {
+    flex-direction: column;
+    transform: none !important;
+    overflow: hidden; /* MUHIM */
+    max-height: calc(3 * 180px); /* FAQAT 3 TA */
+    transition: max-height 0.4s ease;
+  }
+
+  .item-wrapper2.slider.expanded {
+    max-height: 5000px; /* HAMMASI OCHILADI */
+  }
+
+  .item {
+    min-width: 100%;
+  }
+
+  .nav-btn {
+    display: none;
+  }
+}
+
+/* toggle tugma */
+.show-all {
+  margin-top: 24px;
+  padding: 12px 24px;
+  border-radius: 30px;
+  border: none;
+  color: #5f5f5f;
+  cursor: pointer;
+}
+
+/* desktopda tugma yo‘q */
+@media (min-width: 769px) {
+  .show-all {
+    display: none;
+  }
+}
+.Kerakli-reklama{
+    color: #fff;
+    justify-content: center;
+    text-align: center;
+}
+.footer_bottom{
+    padding: 10px;
+    background-color:#e9601d;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    margin-top: 20px;
+}
