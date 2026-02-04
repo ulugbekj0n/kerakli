@@ -1,201 +1,218 @@
 <!DOCTYPE html>
 <html lang="uz">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ro‘yxatdan o‘tish</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ro‘yxatdan o‘tish</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Inter, sans-serif;
-        }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Inter, sans-serif;
+    }
 
-        body {
-            min-height: 100vh;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-        .login-card {
-            background: #fff;
-            width: 100%;
-            max-width: 420px;
-            padding: 32px;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-        }
+    .login-card {
+      background: #fff;
+      width: 100%;
+      max-width: 420px;
+      padding: 32px;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
 
-        .logo {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
+    .logo {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
 
-        .logo img {
-            width: 140px;
-        }
+    .logo img {
+      width: 140px;
+    }
 
-        h2 {
-            text-align: center;
-            margin-bottom: 24px;
-            font-size: 24px;
-        }
+    h2 {
+      text-align: center;
+      margin-bottom: 24px;
+      font-size: 24px;
+    }
 
-        .form-group {
-            margin-bottom: 16px;
-        }
+    .form-group {
+      margin-bottom: 16px;
+    }
 
-        label {
-            display: block;
-            margin-bottom: 6px;
-            font-size: 14px;
-            color: #555;
-        }
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 14px;
+      color: #555;
+    }
 
-        input,
-        select {
-            width: 100%;
-            padding: 12px 14px;
-            border-radius: 10px;
-            border: 1px solid #ddd;
-            outline: none;
-            font-size: 15px;
-        }
+    input,
+    select {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      outline: none;
+      font-size: 15px;
+    }
 
-        input:focus,
-        select:focus {
-            border-color: #667eea;
-        }
+    input:focus,
+    select:focus {
+      border-color: #667eea;
+    }
 
-        button {
-            width: 100%;
-            margin-top: 16px;
-            padding: 14px;
-            border-radius: 12px;
-            border: none;
-            background: #667eea;
-            color: #fff;
-            font-size: 16px;
-            cursor: pointer;
-        }
+    button {
+      width: 100%;
+      margin-top: 16px;
+      padding: 14px;
+      border-radius: 12px;
+      border: none;
+      background: #667eea;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
 
-        button:hover {
-            background: #556cd6;
-        }
-    </style>
+    button:hover {
+      background: #556cd6;
+    }
+  </style>
 </head>
 
 <body>
 
-    <div class="login-card">
-        <div class="logo">
-            <img src="./images/logoo.png" alt="logo">
-        </div>
-
-        <h2>Ro‘yxatdan o‘tish</h2>
-
-        <form id="registerForm">
-            <div class="form-group">
-                <label>Ism familiya</label>
-                <input type="text" id="fullname" required />
-            </div>
-
-            <div class="form-group">
-                <label>Telefon raqam</label>
-                <input type="tel" id="phone" placeholder="+998901234567" required />
-            </div>
-
-            <div class="form-group">
-                <label>Viloyat</label>
-                <select id="region" required>
-                    <option value="">Viloyatni tanlang</option>
-                    <option>Toshkent</option>
-                    <option>Toshkent viloyati</option>
-                    <option>Andijon</option>
-                    <option>Buxoro</option>
-                    <option>Farg‘ona</option>
-                    <option>Jizzax</option>
-                    <option>Xorazm</option>
-                    <option>Namangan</option>
-                    <option>Navoiy</option>
-                    <option>Qashqadaryo</option>
-                    <option>Samarqand</option>
-                    <option>Surxondaryo</option>
-                </select>
-            </div>
-
-            <button type="submit">Ro‘yxatdan o‘tish</button>
-        </form>
+  <div class="login-card">
+    <div class="logo">
+      <img src="./images/logoo.png" alt="logo">
     </div>
 
-    <script>
-        /* ================================
-           TELEGRAM BOT SOZLAMALARI
-        ================================= */
-        const BOT_TOKEN = "8036538853:AAEzltkedGYpxEU2DX4uTGXzrfGBToDe-FI";
+    <h2>Ro‘yxatdan o‘tish</h2>
 
-        // BIR NECHTA ADMIN
-        const ADMIN_CHAT_IDS = [
-            "7862967137", // sen
-            "1347038998", // admin 2
-            "1125353120",  // admin 3
-            "637731855",
-            "7105308582"
-        ];
+    <!-- AUTOCOMPLETE YOQILGAN -->
+    <form id="registerForm" autocomplete="on">
 
-        /* ================================
-           REGISTER LOGIC
-        ================================= */
-        document.getElementById("registerForm").addEventListener("submit", function (e) {
-            e.preventDefault();
+      <div class="form-group">
+        <label>Ism familiya</label>
+        <input
+          type="text"
+          id="fullname"
+          name="name"
+          autocomplete="name"
+          placeholder="Ism familiyangiz"
+          required
+        />
+      </div>
 
-            const fullname = document.getElementById("fullname").value.trim();
-            const phone = document.getElementById("phone").value.trim();
-            const region = document.getElementById("region").value;
+      <div class="form-group">
+        <label>Telefon raqam</label>
+        <input
+          type="tel"
+          id="phone"
+          name="tel"
+          autocomplete="tel"
+          inputmode="tel"
+          placeholder="+998901234567"
+          required
+        />
+      </div>
 
-            if (!fullname || !phone || !region) {
-                alert("Iltimos, barcha maydonlarni to‘ldiring");
-                return;
-            }
+      <div class="form-group">
+        <label>Viloyat</label>
+        <select
+          id="region"
+          autocomplete="address-level1"
+          required
+        >
+          <option value="">Viloyatni tanlang</option>
+          <option>Toshkent</option>
+          <option>Toshkent viloyati</option>
+          <option>Andijon</option>
+          <option>Buxoro</option>
+          <option>Farg‘ona</option>
+          <option>Jizzax</option>
+          <option>Xorazm</option>
+          <option>Namangan</option>
+          <option>Navoiy</option>
+          <option>Qashqadaryo</option>
+          <option>Samarqand</option>
+          <option>Surxondaryo</option>
+        </select>
+      </div>
 
-            const message =
-                "🆕 Yangi ro‘yxatdan o‘tish\n\n" +
-                "👤 Ism: " + fullname + "\n" +
-                "📞 Telefon: " + phone + "\n" +
-                "📍 Viloyat: " + region;
+      <button type="submit">Ro‘yxatdan o‘tish</button>
+    </form>
+  </div>
 
-            // HAMMA ADMINLARGA XABAR YUBORISH
-            Promise.all(
-                ADMIN_CHAT_IDS.map(chatId =>
-                    fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
-                        method: "POST",
-                        headers: { "Content-Type": "application/json" },
-                        body: JSON.stringify({
-                            chat_id: chatId,
-                            text: message
-                        })
-                    })
-                )
-            )
-                .then(() => {
-                    // 🔐 MUHIM: RO‘YXATDAN O‘TGANI BELGILAYMIZ
-                    localStorage.setItem("isRegistered", "true");
+  <script>
+    /* ================================
+       TELEGRAM BOT SOZLAMALARI
+    ================================= */
+    const BOT_TOKEN = "8036538853:AAEzltkedGYpxEU2DX4uTGXzrfGBToDe-FI";
 
-                    // BOSH SAHIFAGA QAYTADI
-                    window.location.href = "index.html";
-                })
-                .catch(() => {
-                    alert("Xatolik yuz berdi, qayta urinib ko‘ring");
-                });
-        });
-    </script>
+    const ADMIN_CHAT_IDS = [
+      "7862967137",
+      "1347038998",
+      "1125353120",
+      "637731855",
+      "7105308582"
+    ];
+
+    /* ================================
+       REGISTER LOGIC
+    ================================= */
+    document.getElementById("registerForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const fullname = document.getElementById("fullname").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const region = document.getElementById("region").value;
+
+      if (!fullname || !phone || !region) {
+        alert("Iltimos, barcha maydonlarni to‘ldiring");
+        return;
+      }
+
+      const message =
+        "🆕 Yangi ro‘yxatdan o‘tish\n\n" +
+        "👤 Ism: " + fullname + "\n" +
+        "📞 Telefon: " + phone + "\n" +
+        "📍 Viloyat: " + region;
+
+      Promise.all(
+        ADMIN_CHAT_IDS.map(chatId =>
+          fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              chat_id: chatId,
+              text: message
+            })
+          })
+        )
+      )
+      .then(() => {
+        // RO‘YXATDAN O‘TGANI BELGILAYMIZ
+        localStorage.setItem("isRegistered", "true");
+
+        // BOSH SAHIFAGA QAYTADI
+        window.location.href = "index.html";
+      })
+      .catch(() => {
+        alert("Xatolik yuz berdi, qayta urinib ko‘ring");
+      });
+    });
+  </script>
 
 </body>
-
 </html>
