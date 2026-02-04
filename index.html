@@ -22,7 +22,7 @@
                     <li><a class="header_link" href="#xizmatlar">Xizmatlar</a></li>
                     <li><a class="header_link" href="#jamoa">Jamoa</a></li>
                 </ul>
-                <a href="tel:+998901792289" class="login">Bog'lanish</a>
+                <a href="./login.html" class="login">Kirish</a>
 
             </div>
         </div>
@@ -476,12 +476,18 @@
         infiniteScroll(".onga_harakat");
     </script>
     <script>
-        if (!localStorage.getItem("isRegistered")) {
+        if (
+            !localStorage.getItem("isRegistered") &&
+            !localStorage.getItem("askedOnce")
+        ) {
+            localStorage.setItem("askedOnce", "true");
+
             setTimeout(() => {
                 window.location.href = "login.html";
             }, 8000);
         }
     </script>
+
     <script>
         const items = document.querySelectorAll(".accordion-item");
 
@@ -536,94 +542,94 @@
         });
     </script>
     <script>
-(() => {
-  const slider = document.querySelector(".item-wrapper2.slider");
-  if (!slider) return;
+        (() => {
+            const slider = document.querySelector(".item-wrapper2.slider");
+            if (!slider) return;
 
-  const items = slider.querySelectorAll(".item");
-  const prev = document.querySelector(".nav-btn.left");
-  const next = document.querySelector(".nav-btn.right");
-  const toggleBtn = document.querySelector(".show-all");
+            const items = slider.querySelectorAll(".item");
+            const prev = document.querySelector(".nav-btn.left");
+            const next = document.querySelector(".nav-btn.right");
+            const toggleBtn = document.querySelector(".show-all");
 
-  let index = 0;
-  let expanded = false;
+            let index = 0;
+            let expanded = false;
 
-  function stepSize() {
-    const item = items[0];
-    const gap = parseInt(getComputedStyle(slider).gap) || 0;
-    return item.offsetWidth + gap;
-  }
+            function stepSize() {
+                const item = items[0];
+                const gap = parseInt(getComputedStyle(slider).gap) || 0;
+                return item.offsetWidth + gap;
+            }
 
-  function update() {
-    if (expanded || window.innerWidth <= 768) return;
-    slider.style.transform = `translateX(-${index * stepSize()}px)`;
-  }
+            function update() {
+                if (expanded || window.innerWidth <= 768) return;
+                slider.style.transform = `translateX(-${index * stepSize()}px)`;
+            }
 
-  next.addEventListener("click", () => {
-    if (expanded) return;
-    if (index < items.length - 1) {
-      index++;
-      update();
-    }
-  });
+            next.addEventListener("click", () => {
+                if (expanded) return;
+                if (index < items.length - 1) {
+                    index++;
+                    update();
+                }
+            });
 
-  prev.addEventListener("click", () => {
-    if (expanded) return;
-    if (index > 0) {
-      index--;
-      update();
-    }
-  });
+            prev.addEventListener("click", () => {
+                if (expanded) return;
+                if (index > 0) {
+                    index--;
+                    update();
+                }
+            });
 
-  toggleBtn.addEventListener("click", () => {
-    expanded = !expanded;
-    slider.classList.toggle("expanded");
-    slider.style.transform = "translateX(0)";
-    index = 0;
+            toggleBtn.addEventListener("click", () => {
+                expanded = !expanded;
+                slider.classList.toggle("expanded");
+                slider.style.transform = "translateX(0)";
+                index = 0;
 
-    toggleBtn.textContent = expanded
-      ? "Qisqartirish"
-      : "Butun jamoani ko‘rish";
-  });
+                toggleBtn.textContent = expanded
+                    ? "Qisqartirish"
+                    : "Butun jamoani ko‘rish";
+            });
 
-  window.addEventListener("resize", update);
-})();
-</script>
-<script>
-(() => {
-  const slider = document.querySelector(".item-wrapper2.slider");
-  const toggleBtn = document.querySelector(".show-all");
+            window.addEventListener("resize", update);
+        })();
+    </script>
+    <script>
+        (() => {
+            const slider = document.querySelector(".item-wrapper2.slider");
+            const toggleBtn = document.querySelector(".show-all");
 
-  if (!slider || !toggleBtn) return;
+            if (!slider || !toggleBtn) return;
 
-  let expanded = false;
+            let expanded = false;
 
-  toggleBtn.addEventListener("click", () => {
-    expanded = !expanded;
-    slider.classList.toggle("expanded");
+            toggleBtn.addEventListener("click", () => {
+                expanded = !expanded;
+                slider.classList.toggle("expanded");
 
-    toggleBtn.textContent = expanded
-      ? "Qisqartirish"
-      : "Butun jamoani ko‘rish";
-  });
-})();
-</script>
-<script>
-(() => {
-  const slider = document.querySelector(".item-wrapper2.slider");
-  const btn = document.querySelector(".show-all");
+                toggleBtn.textContent = expanded
+                    ? "Qisqartirish"
+                    : "Butun jamoani ko‘rish";
+            });
+        })();
+    </script>
+    <script>
+        (() => {
+            const slider = document.querySelector(".item-wrapper2.slider");
+            const btn = document.querySelector(".show-all");
 
-  if (!slider || !btn) return;
+            if (!slider || !btn) return;
 
-  btn.addEventListener("click", () => {
-    slider.classList.toggle("expanded");
+            btn.addEventListener("click", () => {
+                slider.classList.toggle("expanded");
 
-    btn.textContent = slider.classList.contains("expanded")
-      ? "Qisqartirish"
-      : "Butun jamoani ko‘rish";
-  });
-})();
-</script>
+                btn.textContent = slider.classList.contains("expanded")
+                    ? "Qisqartirish"
+                    : "Butun jamoani ko‘rish";
+            });
+        })();
+    </script>
 
 
 
