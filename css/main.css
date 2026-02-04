@@ -695,7 +695,7 @@ footer {
   display: flex;
   width: max-content;
   gap: 80px;
-  animation: marquee-left 40s linear infinite;
+  animation: marquee-left 45s linear infinite;
 }
 
 /* yo‘nalishlar */
